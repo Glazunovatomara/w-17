@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.main__title {
+text-transform: uppercase;
+text-align: center;
+}
+.main__section {
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    justify-content: center;
+    margin-top: 10px;
+}
+.main__section_subtitle,
+.main__section_content {
+    padding: 10px;
+    border: 1px saddlebrown solid;
+    text-transform: uppercase;
+    text-align: center;
+}
+
