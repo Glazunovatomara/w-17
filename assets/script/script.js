@@ -46,7 +46,7 @@ class Transport {
         return this.type + ' - ' + this.brand
     }
     getPrice() {
-        return this.price
+        return Intl.NumberFormat('ru-RU',{style: 'currency', currency: 'RUB'}).format(this.price)
     }
 }
 //создать класс Car, который наследует от Transport. 
@@ -68,6 +68,9 @@ class Bike extends Transport {
 
 
 for (let item of data) {
+  
+
+
   if(item.type !== '') {
     itemType = item.type;
   } 
@@ -92,10 +95,12 @@ for (let item of data) {
     itemMaxSpeed = ` максимальная скорость: ${item.maxSpeed}`; 
   }
 
-  const transport1 = new Transport(itemType, itemPrice, itemBrand)
-  const car1 = new Car()
-  const bike1 = new Bike()
-  console.log(`${transport1.getInfo()}, цена: ${transport1.getPrice()} руб., ${car1.getDoorsCount(itemDoors)} ${bike1.getMaxSpeed(itemMaxSpeed)}`)
+  const transport = new Transport(itemType, itemPrice, itemBrand)
+  const car = new Car()
+  const bike = new Bike()
+  console.log(`${transport.getInfo()}, цена: ${transport.getPrice()} , ${car.getDoorsCount(itemDoors)} ${bike.getMaxSpeed(itemMaxSpeed)}`)
+  
+
 }
 
 
